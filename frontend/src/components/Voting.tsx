@@ -212,6 +212,7 @@ export const Voting: FC = () => {
                 .vote(candidateName, new BN(pollId)) // Arguments in the same order as the backend
                 .accounts({
                     voter: ourWallet.publicKey,
+                    // @ts-ignore
                     pollPda: pollPda,
                     candidate: candidatePda,
                     votePda: votePda,
